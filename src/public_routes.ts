@@ -9,10 +9,20 @@
 import { Router } from 'express';
 import { safe } from './utils';
 import { createUser } from './actions';
+import { TodosToID } from './actions';
+import { createTodoListToID } from './actions';
+import { updateTodoListToID } from './actions';
+import { deleteTodoListAndID } from './actions';
+
+
 
 const router = Router();
 
 // signup route, creates a new user in the DB
 router.post('/user', safe(createUser));
+router.get('/todos/user/:userid', safe(TodosToID));
+router.post('/todos/user/:userid', safe(createTodoListToID));
+router.put('/todos/user/:userid', safe(updateTodoListToID));
+router.delete('/todos/user/:userid', safe(deleteTodoListAndID));
 
 export default router;
