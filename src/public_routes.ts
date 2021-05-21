@@ -22,7 +22,7 @@ const router = Router();
 router.post('/user', safe(createUser));
 router.get('/todos/user/:userid', safe(TodosToID));
 router.post('/todos/user/:userid', safe(createTodoListToID));
-router.put('/todos/user/:userid', safe(updateTodoListToID));
-router.delete('/todos/user/:userid', safe(deleteTodoListAndID));
+router.put('/todos/user/:todoid', safe(updateTodoListToID));
+router.delete('/todos/user/:todoid', safe(deleteTodoListAndID));
 
 export default router;

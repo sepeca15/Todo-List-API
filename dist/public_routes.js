@@ -19,6 +19,6 @@ var router = express_1.Router();
 router.post('/user', utils_1.safe(actions_1.createUser));
 router.get('/todos/user/:userid', utils_1.safe(actions_2.TodosToID));
 router.post('/todos/user/:userid', utils_1.safe(actions_3.createTodoListToID));
-router.put('/todos/user/:userid', utils_1.safe(actions_4.updateTodoListToID));
-router["delete"]('/todos/user/:userid', utils_1.safe(actions_5.deleteTodoListAndID));
+router.put('/todos/user/:todoid', utils_1.safe(actions_4.updateTodoListToID));
+router["delete"]('/todos/user/:todoid', utils_1.safe(actions_5.deleteTodoListAndID));
 exports["default"] = router;
